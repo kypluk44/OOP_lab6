@@ -8,11 +8,6 @@
 Squirrel::Squirrel(const std::string &name, int x, int y) : NPC(SquirrelType, name, x, y) {}
 Squirrel::Squirrel(std::istream &is) : NPC(SquirrelType, is) {}
 
-bool Squirrel::is_squirrel() const
-{
-    return true;
-}
-
 bool Squirrel::accept(const std::shared_ptr<NPC> &attacker)
 {
     return attacker->fight(std::dynamic_pointer_cast<Squirrel>(shared_from_this()));

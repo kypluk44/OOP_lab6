@@ -8,8 +8,6 @@ public:
     Ork(const std::string &name, int x, int y);
     explicit Ork(std::istream &is);
 
-    bool is_ork() const override;
-
     bool accept(const std::shared_ptr<NPC> &attacker) override;
 
     bool fight(const std::shared_ptr<Ork> &other) override;

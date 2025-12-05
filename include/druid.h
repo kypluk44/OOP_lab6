@@ -8,7 +8,6 @@ public:
     Druid(const std::string &name, int x, int y);
     explicit Druid(std::istream &is);
 
-    bool is_druid() const override;
 
     bool accept(const std::shared_ptr<NPC> &attacker) override;
 

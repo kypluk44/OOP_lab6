@@ -8,11 +8,6 @@
 Ork::Ork(const std::string &name, int x, int y) : NPC(OrkType, name, x, y) {}
 Ork::Ork(std::istream &is) : NPC(OrkType, is) {}
 
-bool Ork::is_ork() const
-{
-    return true;
-}
-
 bool Ork::accept(const std::shared_ptr<NPC> &attacker)
 {
     return attacker->fight(std::dynamic_pointer_cast<Ork>(shared_from_this()));

@@ -48,10 +48,6 @@ public:
 
     virtual bool is_close(const std::shared_ptr<NPC> &other, size_t distance) const;
 
-    virtual bool is_ork() const;
-    virtual bool is_squirrel() const;
-    virtual bool is_druid() const;
-
     virtual bool accept(const std::shared_ptr<NPC> &attacker) = 0;
 
     virtual bool fight(const std::shared_ptr<Ork> &other) = 0;

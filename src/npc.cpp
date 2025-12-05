@@ -2,12 +2,12 @@
 
 #include <utility>
 
-NPC::NPC(NpcType t, std::string nm, int x_pos, int y_pos)
+NPC::NPC(NpcType t, std::string nm, int x_pos, int y_pos) // конструктор с параметрами
     : name(std::move(nm)), type(t), x(x_pos), y(y_pos)
 {
 }
 
-NPC::NPC(NpcType t, std::istream &is) : type(t)
+NPC::NPC(NpcType t, std::istream &is) : type(t) // конструктор из файла
 {
     is >> name;
     is >> x;
@@ -28,21 +28,6 @@ void NPC::fight_notify(const std::shared_ptr<NPC> &defender, bool win)
 bool NPC::is_close(const std::shared_ptr<NPC> &other, size_t distance) const
 {
     return std::pow(x - other->x, 2) + std::pow(y - other->y, 2) <= std::pow(distance, 2);
-}
-
-bool NPC::is_ork() const
-{
-    return false;
-}
-
-bool NPC::is_squirrel() const
-{
-    return false;
-}
-
-bool NPC::is_druid() const
-{
-    return false;
 }
 
 void NPC::save(std::ostream &os) const

@@ -8,11 +8,6 @@
 Druid::Druid(const std::string &name, int x, int y) : NPC(DruidType, name, x, y) {}
 Druid::Druid(std::istream &is) : NPC(DruidType, is) {}
 
-bool Druid::is_druid() const
-{
-    return true;
-}
-
 bool Druid::accept(const std::shared_ptr<NPC> &attacker)
 {
     return attacker->fight(std::dynamic_pointer_cast<Druid>(shared_from_this()));

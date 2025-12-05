@@ -1,0 +1,8 @@
+7
+1 ork1 10 10
+1 ork2 480 480
+2 squirrel1 20 20
+2 squirrel2 30 30
+1 ork3 205 205
+1 ork4 300 100
+2 squirrel4 310 110

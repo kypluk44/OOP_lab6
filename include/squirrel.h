@@ -8,8 +8,6 @@ public:
     Squirrel(const std::string &name, int x, int y);
     explicit Squirrel(std::istream &is);
 
-    bool is_squirrel() const override;
-
     bool accept(const std::shared_ptr<NPC> &attacker) override;
 
     bool fight(const std::shared_ptr<Ork> &other) override;
